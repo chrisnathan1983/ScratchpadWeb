@@ -12,8 +12,8 @@
         <header>
             <div class="file-menu-container">
                 <div class="menu-title" id="fileMenuToggle">
-                    <span id="fileName">File</span>
                     <i class="material-icons hamburger-icon">menu</i>
+                    <span id="fileName">File</span>
                 </div>
                 <div class="dropdown-menu" id="fileMenu">
                     <button id="newFileBtn" title="New File"><i class="material-icons">note_add</i> New</button>
@@ -35,6 +35,21 @@
 
         <input type="file" id="fileInput" style="display:none;" accept=".txt">
     </div>
+
+    <template id="tracker-tpl">
+        <div class="tracker-item">
+            <div class="tracker-buttons left">
+                <button class="decrease"><i class="material-icons">remove</i></button>
+            </div>
+            <div class="tracker-display">
+                <span class="tracker-value">0</span>
+                <span class="tracker-label"></span>
+            </div>
+            <div class="tracker-buttons right">
+                <button class="increase"><i class="material-icons">add</i></button>
+            </div>
+        </div>
+    </template>
 
     <template id="group-tpl">
         <section class="group" draggable="false">
@@ -63,21 +78,6 @@
                 </div>
             </div>
         </article>
-    </template>
-
-    <template id="tracker-tpl">
-        <div class="tracker-item">
-            <div class="tracker-buttons left">
-                <button class="decrease"><i class="material-icons">remove</i></button>
-            </div>
-            <div class="tracker-display">
-                <span class="tracker-value">0</span>
-                <span class="tracker-label"></span>
-            </div>
-            <div class="tracker-buttons right">
-                <button class="increase"><i class="material-icons">add</i></button>
-            </div>
-        </div>
     </template>
 
     <script src="scripts.js"></script>

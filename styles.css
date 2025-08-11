@@ -219,6 +219,7 @@ header {
     gap: 6px;
     cursor: grab;
     width: 100%;
+    overflow: hidden;
 }
 
     .note.dragging {
@@ -247,6 +248,7 @@ header {
     padding: 0;
     background: transparent;
     border: 0;
+    word-break: break-all;
 }
 
 .note-controls {
