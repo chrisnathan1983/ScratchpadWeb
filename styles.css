@@ -220,6 +220,8 @@ header {
     cursor: grab;
     width: 100%;
     overflow: hidden;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
     .note.dragging {
@@ -228,7 +230,8 @@ header {
     }
 
 .note-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: flex-start;
     gap: 8px;
 }
@@ -244,11 +247,15 @@ header {
     outline: none;
     white-space: pre-wrap;
     color: white;
-    flex: 1;
+    flex: initial;
     padding: 0;
     background: transparent;
     border: 0;
     word-break: break-all;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-wrap: break-word; /* already there, but this reinforces it */
+    word-break: break-word;
 }
 
 .note-controls {
